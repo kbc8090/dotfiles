@@ -35,7 +35,7 @@ let g:material_theme_style = 'palenight'
 let g:SnazzyTransparent = 1
 let g:dracula_italic = 0
 let ayucolor="light"
-colorscheme material
+colorscheme palenight
 filetype plugin on
 syntax on
 set shiftwidth=3
