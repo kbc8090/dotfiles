@@ -1,0 +1,91 @@
+!---- XFT Font Settings (Make Fonts Great Again) ----!
+
+Xft.dpi: 96
+Xft.antialias: true
+Xft.rgba: rgb
+Xft.autohint: false
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+
+!---- XTERM Settings ----!
+
+XTerm*boldFont: CaskaydiaCove Nerd Font:style=Regular:size=14
+XTerm*faceName: CaskaydiaCove Nerd Font:style=Regular:size=14
+XTerm*boldMode: true
+XTerm*boldIsBright: true
+XTerm*locale: true
+
+!---- URXVT Settings ----!
+
+URxvt*termName: xterm-256color
+URxvt*letterSpace: 0
+URxvt*font: xft:Consolas:size=15:style=Medium, xft:CaskaydiaCove Nerd Font:size=13:style=Regular, xft:JoyPixels:pixelsize=14
+URxvt*scrollBar: false
+URxvt*depth: 32
+URxvt*sizeHints: true
+URxvt*background: [88]#1b1e2b
+URxvt*internalBorder: 6
+URxvt*perl-ext:
+URxvt.perl-ext-common: default,matcher,resize-font
+URxvt.keysym.C-Down:  resize-font:smaller
+URxvt.keysym.C-Up:    resize-font:bigger
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+URxvt.url-launcher: chromium
+URxvt.matcher.button: 1
+URxvt*underlineURLs: true
+URxvt*urlButton: 1
+URxvt*intensityStyles: false
+URxvt*cursorColor: #c387ea 
+
+!--- sxiv Settings ----!
+
+Sxiv.background: #1b1e2b
+Sxiv.foreground: #719eff
+Sxiv.font: FiraCode Nerd Font:style=Medium:size=9:autohint=true:rgba=rgb:lcdfilter=lcddefault
+
+!--- st (suckless) Settings ----!
+
+st.alpha: 0.88
+st.font: FiraCode Nerd Font:style=Medium:size=14:dpi=96:antialias=true:autohint=false:hinting=true:rgba=rgb:hintstyle=hintslight:lcdfilter=lcddefault
+st.borderpx: 3
+st.minlatency: 3
+st.maxlatency: 12
+
+! special
+*.foreground:   #a8b4ff
+*.background:   #1b1e2b
+*.cursorcolor:  #ffc185
+
+! black
+*.color0:       #6a73ab
+*.color8:       #4c5063
+
+! red
+*.color1:       #f07178
+*.color9:       #ff8b92
+
+! green
+*.color2:       #b7e07c
+*.color10:      #d9ff9e
+
+! yellow
+*.color3:       #ffb26b
+*.color11:      #ffc185
+
+! blue
+*.color4:       #719eff
+*.color12:      #86c4ff
+
+! magenta
+*.color5:       #c387ea
+*.color13:      #dea2ff
+
+! cyan
+*.color6:       #82dbff
+*.color14:      #9af6ff
+
+! white
+*.color7:       #d0d0d0
+*.color15:      #ffffff
