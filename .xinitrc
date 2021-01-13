@@ -17,4 +17,6 @@ fi
 
 xrandr -s 1920x1200 &
 nitrogen --restore &
-exec dwm
+#hsetroot -fill $HOME/Downloads/wallhaven-l395rr.jpg &
+xset r rate 300 58 &
+exec spectrwm
