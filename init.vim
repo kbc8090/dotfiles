@@ -28,6 +28,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'kaicataldo/material.vim'
 	Plug 'justinmk/vim-syntax-extra'
 	Plug 'ayu-theme/ayu-vim'
+	Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
@@ -35,7 +36,7 @@ let g:material_theme_style = 'palenight'
 let g:SnazzyTransparent = 1
 let g:dracula_italic = 0
 let ayucolor="light"
-colorscheme palenight
+colorscheme onedark
 filetype plugin on
 syntax on
 set shiftwidth=3
@@ -91,7 +92,7 @@ function! ToggleCursorLine()
 	else
 		setlocal cursorline
 		highlight clear Cursorline
-		highlight CursorLineNr term=bold cterm=bold gui=bold guifg=orange guibg=NONE
+		highlight CursorLineNr term=bold cterm=bold gui=bold guifg=lightblue guibg=NONE
 	endif
 endfunction
 
@@ -102,7 +103,7 @@ let NERDTreeHighlightCursorline = 1
 let g:webdevicons_enable_nerdtree = 1
 
 let g:lightline = {
-			\  'colorscheme': 'palenight',
+			\  'colorscheme': 'material',
 			\  'component_function': {
 			\    'filetype': 'MyFiletype',
 			\    'fileformat': 'MyFileformat',
