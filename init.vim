@@ -36,7 +36,7 @@ let g:material_theme_style = 'palenight'
 let g:SnazzyTransparent = 1
 let g:dracula_italic = 0
 let ayucolor="light"
-colorscheme onedark
+colorscheme material
 filetype plugin on
 syntax on
 set shiftwidth=3
@@ -93,6 +93,7 @@ function! ToggleCursorLine()
 		setlocal cursorline
 		highlight clear Cursorline
 		highlight CursorLineNr term=bold cterm=bold gui=bold guifg=lightblue guibg=NONE
+		highlight LineNr guibg=NONE
 	endif
 endfunction
 
@@ -103,7 +104,7 @@ let NERDTreeHighlightCursorline = 1
 let g:webdevicons_enable_nerdtree = 1
 
 let g:lightline = {
-			\  'colorscheme': 'material',
+			\  'colorscheme': 'palenight',
 			\  'component_function': {
 			\    'filetype': 'MyFiletype',
 			\    'fileformat': 'MyFileformat',
