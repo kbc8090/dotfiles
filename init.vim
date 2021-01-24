@@ -29,6 +29,8 @@ call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'justinmk/vim-syntax-extra'
 	Plug 'ayu-theme/ayu-vim'
 	Plug 'sheerun/vim-polyglot'
+	Plug 'arcticicestudio/nord-vim'
+	Plug 'yegappan/mru'
 
 call plug#end()
 
@@ -94,6 +96,7 @@ function! ToggleCursorLine()
 		highlight clear Cursorline
 		highlight CursorLineNr term=bold cterm=bold gui=bold guifg=lightblue guibg=NONE
 		highlight LineNr guibg=NONE
+		highlight VertSplit guibg=NONE
 	endif
 endfunction
 
