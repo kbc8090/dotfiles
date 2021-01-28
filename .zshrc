@@ -1,6 +1,8 @@
 # Changes to steady ibeam in xterm
 # echo -e -n "\x1b[\x36 q" 
  echo -e -n "\033[6 q"
+ export EDITOR=nvim
+ export BROWSER=chromium
 # [ -n "$XTERM_VERSION" ] && transset-df --id "$WINDOWID" >/dev/null
 # Enable colors and change prompt:❮
 
@@ -22,8 +24,8 @@ compinit
 _comp_options+=(globdots)
 
 # Alias
-alias ls="exa -a --group-directories-first --icons"
-alias ll="exa -alh --git --group-directories-first --icons"
+alias ls="exa -a --group-directories-first --icons --color=always"
+alias ll="exa -alh --git --group-directories-first --icons --color=always"
 alias shutdown="shutdown now"
 alias df="df -h"
 alias free="free -h"
@@ -32,6 +34,10 @@ alias vimrc="nvim $HOME/.config/nvim/init.vim"
 alias xterm="xterm -b 5"
 alias wp="$HOME/.local/bin/wallpaper"
 alias packagesizes="expac -H M '%m\t%n' | sort -h"
+alias sx="startx"
+alias grep="rg"
+#alias cat="bat --theme Material-Theme-Palenight"
+alias bat="bat --theme Material-Theme-Palenight"
 
 # Load zsh-syntax-highlighting and dynamic window title plugin; should be last.
 source $HOME/.zsh/termsupport.zsh
