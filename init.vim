@@ -94,7 +94,7 @@ function! ToggleCursorLine()
 	else
 		setlocal cursorline
 		highlight clear Cursorline
-		highlight CursorLineNr term=bold cterm=bold gui=bold guifg=lightblue guibg=NONE
+		highlight CursorLineNr term=bold cterm=bold gui=bold guifg='#f78c6c' guibg=NONE
 		highlight LineNr guibg=NONE
 		highlight VertSplit guibg=NONE
 	endif
@@ -107,6 +107,10 @@ let NERDTreeHighlightCursorline = 1
 let g:webdevicons_enable_nerdtree = 1
 
 let g:lightline = {
+			\ 'active': {
+			\   'left': [ [ 'mode', 'paste' ],
+			\             [ 'readonly', 'filename', 'modified' ] ]
+			\ },
 			\  'colorscheme': 'palenight',
 			\  'component_function': {
 			\    'filetype': 'MyFiletype',
@@ -116,7 +120,7 @@ let g:lightline = {
 			\	  'tabnum': 'LightlineWebDevIcons',
 			\	},
 			\  'tabline': {
-			\    'right': [ [ 'absolutepath' ] ]
+			\    'right': [ [ 'absolutepath', 'modified' ] ]
 			\ },
 \ }
 
