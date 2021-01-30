@@ -1,8 +1,9 @@
 echo -e -n "\x1b[\x36 q" # Initial cursor set to steady bar 
 
 set fish_greeting
-set TERM "xterm-256color"
+set TERM "st-256color"
 set EDITOR "nvim"
+set -x LESS "-X"
 set fish_color_normal cyan
 set fish_color_autosuggestion black
 set fish_color_command green
@@ -19,6 +20,8 @@ alias shutdown='shutdown now'
 alias vimrc='nvim $HOME/.config/nvim/init.vim'
 alias packagesizes="expac -H M '%m\t%n' | sort -h"
 alias sx='startx'
+alias grep='rg'
+alias bat='bat --theme=palenight'
 
 function fish_prompt
 
