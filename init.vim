@@ -30,6 +30,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'ayu-theme/ayu-vim'
 	Plug 'sheerun/vim-polyglot'
 	Plug 'arcticicestudio/nord-vim'
+	Plug 'liuchengxu/space-vim-dark'
 	Plug 'yegappan/mru'
 
 call plug#end()
@@ -38,7 +39,7 @@ let g:material_theme_style = 'palenight'
 let g:SnazzyTransparent = 1
 let g:dracula_italic = 0
 let ayucolor="light"
-colorscheme material
+colorscheme space-vim-dark
 filetype plugin on
 syntax on
 set shiftwidth=3
@@ -97,6 +98,7 @@ function! ToggleCursorLine()
 		highlight CursorLineNr term=bold cterm=bold gui=bold guifg='#f78c6c' guibg=NONE
 		highlight LineNr guibg=NONE
 		highlight VertSplit guibg=NONE
+		highlight SignColumn guibg=NONE
 	endif
 endfunction
 
@@ -105,6 +107,7 @@ let NERDTreeQuitOnOpen = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeHighlightCursorline = 1
 let g:webdevicons_enable_nerdtree = 1
+
 
 let g:lightline = {
 			\ 'active': {
@@ -132,14 +135,6 @@ function! LightlineWebDevIcons(n)
 	return WebDevIconsGetFileTypeSymbol(bufname(l:bufnr))
 endfunction
 
-function! MyFiletype()
-	return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
-endfunction
-
-function! MyFileformat()
-	return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
-endfunction
-
 autocmd VimEnter * call SetupLightlineColors()
 function SetupLightlineColors() abort
 	let l:palette = lightline#palette()
@@ -150,6 +145,14 @@ function SetupLightlineColors() abort
 	let l:palette.inactive.middle = l:palette.normal.middle
 	let l:palette.tabline.middle = l:palette.normal.middle
 	call lightline#colorscheme()
+endfunction
+
+function! MyFiletype()
+	return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+endfunction
+
+function! MyFileformat()
+	return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
 endfunction
 
 "let g:airline_powerline_fonts = 1
