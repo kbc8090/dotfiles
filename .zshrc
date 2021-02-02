@@ -3,6 +3,7 @@
  echo -e -n "\033[6 q"
  export EDITOR=nvim
  export BROWSER=chromium
+ export LESS="-X"
 # [ -n "$XTERM_VERSION" ] && transset-df --id "$WINDOWID" >/dev/null
 # Enable colors and change prompt:❮
 
