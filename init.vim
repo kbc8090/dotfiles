@@ -17,6 +17,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'itchyny/lightline.vim'
 	Plug 'ryanoasis/vim-devicons'
 	Plug 'norcalli/nvim-colorizer.lua'
+	Plug 'luochen1990/rainbow'
 	"Plug 'vim-airline/vim-airline'
 	"Plug 'vim-airline/vim-airline-themes'
 	Plug 'connorholyday/vim-snazzy'
@@ -32,6 +33,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'arcticicestudio/nord-vim'
 	Plug 'liuchengxu/space-vim-dark'
 	Plug 'yegappan/mru'
+	Plug 'mhinz/vim-startify'
 
 call plug#end()
 
@@ -39,7 +41,8 @@ let g:material_theme_style = 'palenight'
 let g:SnazzyTransparent = 1
 let g:dracula_italic = 0
 let ayucolor="light"
-colorscheme space-vim-dark
+let g:rainbow_active = 1
+colorscheme palenight
 filetype plugin on
 syntax on
 set shiftwidth=3
@@ -60,6 +63,7 @@ set termguicolors
 set splitright
 set splitbelow
 set t_Co=256
+set relativenumber
 set noswapfile
 set nobackup
 set incsearch
@@ -68,14 +72,17 @@ set title
 set noshowmode
 set showtabline=2
 set cmdheight=1
-set scrolloff=2
+set scrolloff=3
 set ttyfast
 let g:netrw_browse_split=3
 lua require'colorizer'.setup()
 highlight Normal guibg=NONE ctermbg=NONE
 highlight Search gui=standout,underline guibg=inverse guifg=inverse
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+let mapleader=" "
 
+nnoremap <leader>r :MRU<CR>
+nnoremap <leader>q :q!<CR>
 nnoremap cw ciw
 nnoremap <silent> j gj
 nnoremap <silent> k gk
@@ -102,12 +109,24 @@ function! ToggleCursorLine()
 	endif
 endfunction
 
+let g:rainbow_conf = {
+			\	'separately': {
+			\		'nerdtree': 0,
+			\	},
+			\ 'guifgs': ['#ffb26b', '#c387ea', '#b7e07c', '#f07178', '#c387ea']
+			\}
+
 let NERDTreeShowHidden = 1
 let NERDTreeQuitOnOpen = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeHighlightCursorline = 1
+let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
 let g:webdevicons_enable_nerdtree = 1
-
+"let g:WebDevIconsDisableDefaultFolderSymbolColorFromNERDTreeDir = 1
+"let g:WebDevIconsDisableDefaultFileSymbolColorFromNERDTreeFile = 1
+"let g:NERDTreeFileExtensionHighlightFullName = 1
+"let g:NERDTreeExactMatchHighlightFullName = 1
+"let g:NERDTreePatternMatchHighlightFullName = 1
 
 let g:lightline = {
 			\ 'active': {
