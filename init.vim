@@ -81,17 +81,17 @@ highlight Search gui=standout,underline guibg=inverse guifg=inverse
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 let mapleader=" "
 
-nnoremap <leader>r :MRU<CR>
-nnoremap <leader>q :q!<CR>
-nnoremap cw ciw
+nnoremap <silent><leader>r :MRU<CR>
+nnoremap <silent><leader>q :q!<CR>
+nnoremap <silent> cw ciw
 nnoremap <silent> j gj
 nnoremap <silent> k gk
 nnoremap <silent> <C-j> <C-w>h
 nnoremap <silent> <C-k> <C-w>l
 nnoremap <silent> <TAB> :tabn<CR>
 nnoremap <silent> <S-TAB> :tabp<CR>
-nnoremap <silent> <M-j> :vertical resize-3<CR>
-nnoremap <silent> <M-k> :vertical resize+3<CR>
+nnoremap <silent> <M-j> :vertical resize-4<CR>
+nnoremap <silent> <M-k> :vertical resize+4<CR>
 nnoremap <silent> <F9> :NERDTreeToggle<CR>
 
 autocmd! BufEnter * call ToggleCursorLine()
@@ -113,7 +113,7 @@ let g:rainbow_conf = {
 			\	'separately': {
 			\		'nerdtree': 0,
 			\	},
-			\ 'guifgs': ['#ffb26b', '#c387ea', '#b7e07c', '#f07178', '#c387ea']
+			\ 'guifgs': ['#c387ea', '#ffb26b', '#b7e07c', '#f07178', '#c387ea']
 			\}
 
 let NERDTreeShowHidden = 1
