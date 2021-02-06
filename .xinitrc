@@ -15,8 +15,9 @@ if [ -f "$userresources" ]; then
 
 fi
 
+xset r rate 300 59 &
+xset s off -dpms
 xrandr -s 1920x1200 &
 nitrogen --restore &
-#hsetroot -fill $HOME/Downloads/wallhaven-l395rr.jpg &
-xset r rate 300 58 &
-exec spectrwm
+#$HOME/.local/bin/wallpaper &
+exec dwm
