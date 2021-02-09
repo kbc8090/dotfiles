@@ -15,9 +15,9 @@ if [ -f "$userresources" ]; then
 
 fi
 
+export XSESSION_PID="$$"
 xset r rate 300 59 &
 xset s off -dpms
 xrandr -s 1920x1200 &
 nitrogen --restore &
-#$HOME/.local/bin/wallpaper &
 exec dwm
