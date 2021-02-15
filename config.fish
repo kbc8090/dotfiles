@@ -4,6 +4,7 @@ set fish_greeting
 set TERM "st-256color"
 set EDITOR "nvim"
 set -x LESS "-X"
+set EXA_ICON_SPACING "0"
 set fish_color_normal cyan
 set fish_color_autosuggestion black
 set fish_color_command green
@@ -22,6 +23,8 @@ alias packagesizes="expac -H M '%m\t%n' | sort -h"
 alias sx='startx'
 alias grep='rg'
 alias bat='bat --theme=palenight'
+alias du='du -h'
+alias sdn='shutdown now'
 
 function fish_prompt
 
@@ -40,12 +43,14 @@ function fish_prompt
 	set_color red
 	printf "]"
 	set_color normal
-	set_color red
-	printf " ❯"
+	set_color red --bold
+	printf " ➤"
 	set_color yellow
-	printf "❯"
+	printf "➤"
 	set_color green
-	printf "❯ "
+	printf "➤ "
+	#set_color yellow --bold
+#	printf " ➤➤➤ "
 	set_color normal
 
 end
