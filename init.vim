@@ -34,6 +34,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'liuchengxu/space-vim-dark'
 	Plug 'yegappan/mru'
 	Plug 'mhinz/vim-startify'
+"	Plug 'vim-scripts/AutoComplPop'
 
 call plug#end()
 
@@ -42,7 +43,8 @@ let g:SnazzyTransparent = 1
 let g:dracula_italic = 0
 let ayucolor="light"
 let g:rainbow_active = 1
-colorscheme palenight
+set termguicolors
+colorscheme material
 filetype plugin on
 syntax on
 set shiftwidth=3
@@ -50,7 +52,7 @@ set tabstop=3
 set softtabstop=3
 set noerrorbells
 set smartindent
-set nowrap
+"set nowrap
 set ignorecase
 set smartcase
 set number 
@@ -59,7 +61,6 @@ set encoding=UTF-8
 set cursorline
 set wildmode=longest,list,full
 set wildmenu
-set termguicolors
 set splitright
 set splitbelow
 set t_Co=256
@@ -73,8 +74,11 @@ set noshowmode
 set showtabline=2
 set cmdheight=1
 set scrolloff=3
+"set complete+=kspell
+"set completeopt=menuone,longest
 set ttyfast
 let g:netrw_browse_split=3
+let MRU_Open_File_Use_Tabs = 1
 lua require'colorizer'.setup()
 highlight Normal guibg=NONE ctermbg=NONE
 highlight Search gui=standout,underline guibg=inverse guifg=inverse
@@ -83,6 +87,7 @@ let mapleader=" "
 
 nnoremap <silent><leader>r :MRU<CR>
 nnoremap <silent><leader>q :q!<CR>
+nnoremap <silent><leader>w :w<CR>
 nnoremap <silent> cw ciw
 nnoremap <silent> j gj
 nnoremap <silent> k gk
@@ -96,11 +101,13 @@ nnoremap <silent> <F9> :NERDTreeToggle<CR>
 
 autocmd! BufEnter * call ToggleCursorLine()
 function! ToggleCursorLine()
-	if (bufname("%") =~ "NERD_Tree_")
-		highlight CursorLine guibg='#374152'
+	if (bufname("%") =~ "NERD_Tree")
+		highlight CursorLine guibg='#ffb26b' guifg='#000000'
 		autocmd BufEnter,FileType nerdtree setlocal statusline=%#Normal#
+	elseif (bufname("%") =~ "-RecentFiles-")
+		highlight CursorLine guibg='#3e4452'
 	else
-		setlocal cursorline
+		"setlocal cursorline
 		highlight clear Cursorline
 		highlight CursorLineNr term=bold cterm=bold gui=bold guifg='#f78c6c' guibg=NONE
 		highlight LineNr guibg=NONE
@@ -119,9 +126,9 @@ let g:rainbow_conf = {
 let NERDTreeShowHidden = 1
 let NERDTreeQuitOnOpen = 1
 let NERDTreeMinimalUI = 1
-let NERDTreeHighlightCursorline = 1
-let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
-let g:webdevicons_enable_nerdtree = 1
+"let NERDTreeHighlightCursorline = 1
+"let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
+"let g:webdevicons_enable_nerdtree = 1
 "let g:WebDevIconsDisableDefaultFolderSymbolColorFromNERDTreeDir = 1
 "let g:WebDevIconsDisableDefaultFileSymbolColorFromNERDTreeFile = 1
 "let g:NERDTreeFileExtensionHighlightFullName = 1
