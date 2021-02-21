@@ -4,11 +4,14 @@
  export EDITOR=nvim
  export BROWSER=chromium
  export LESS="-X"
+ export CLICOLOR=1
+ export LSCOLORS=GxFxCxDxBxegedabagaced
+ export MANPAGER="nvim -c 'set ft=man' -"
 # [ -n "$XTERM_VERSION" ] && transset-df --id "$WINDOWID" >/dev/null
 # Enable colors and change prompt:❮
 
 autoload -U colors && colors
-PS1="%{$fg[red]%}[%B%{$fg[green]%}%n%b%{$fg[red]%}@%B%{$fg[blue]%}%M %{$fg[magenta]%}%~%b%{$fg[red]%}]% %B%{$fg[yellow]%} »%{$reset_color%}%b "
+PS1="%{$fg[red]%}[%B%{$fg[green]%}%n%b%{$fg[red]%}@%B%{$fg[blue]%}%M %{$fg[magenta]%}%~%b%{$fg[red]%}]% %{$fg[yellow]%} »%{$reset_color%} "
 #PS1="%B%{$fg[red]%}[%{$fg[green]%}%n%{$fg[red]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%} »%b "
 #PS1="%B%{$fg[green]%}❮%{$fg[yellow]%}❮%{$fg[red]%}❮%{$fg[green]%} %n%{$fg[red]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~ %{$fg[red]%}% ❯%{$fg[yellow]%}❯%{$fg[green]%}❯%{$reset_color%}%b "
 
@@ -39,6 +42,10 @@ alias sx="startx"
 alias grep="rg"
 #alias cat="bat --theme Material-Theme-Palenight"
 alias bat="bat --theme Material-Theme-Palenight"
+alias yay="paru"
+alias sdn="shutdown now"
+alias pacup="sudo pacman -Syyu"
+alias updaterepos='sudo reflector --verbose -c US --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
 
 # Load zsh-syntax-highlighting and dynamic window title plugin; should be last.
 source $HOME/.zsh/termsupport.zsh
