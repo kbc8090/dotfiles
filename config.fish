@@ -4,6 +4,7 @@ set fish_greeting
 set TERM "st-256color"
 set EDITOR "nvim"
 set -x LESS "-X"
+set -x MANPAGER "nvim -c 'set ft=man' -"
 set EXA_ICON_SPACING "0"
 set fish_color_normal cyan
 set fish_color_autosuggestion black
@@ -25,9 +26,13 @@ alias grep='rg'
 alias bat='bat --theme=palenight'
 alias du='du -h'
 alias sdn='shutdown now'
+alias pacup='sudo pacman -Syyu'
+alias updaterepos='sudo reflector --verbose -c US --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
 
 function fish_prompt
 
+	set_color blue
+	printf " "
 	set_color red
 	printf "["
 	set_color green --bold
@@ -55,11 +60,27 @@ function fish_prompt
 
 end
 
+#function fish_right_prompt
+#    if test $CMD_DURATION
+#        # Show duration of the last command in seconds
+#		  set_color red
+#		  printf "["
+#		  set_color cyan  --bold
+#        set duration (echo "$CMD_DURATION 1000" | awk '{printf "%.2fs", $1 / $2}')
+#        echo $duration
+#		  set_color normal
+#		  set_color red
+#		  printf "]"
+#		  set_color normal
+#    end
+#end
+
 function fish_title
 	
 	printf "%s" "$USER"
 	printf "@"
 	printf "%s" "$hostname: "
-	printf "%s" "$PWD"
-
+	printf "%s" "$PWD - "
+#	echo $argv[1]
+   echo $_ ' '
 end
