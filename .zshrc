@@ -7,6 +7,8 @@
  export CLICOLOR=1
  export LSCOLORS=GxFxCxDxBxegedabagaced
  export MANPAGER="nvim -c 'set ft=man' -"
+ export MANPAGER="nvim +Man!"
+ export EXA_ICON_SPACING=2
 # [ -n "$XTERM_VERSION" ] && transset-df --id "$WINDOWID" >/dev/null
 # Enable colors and change prompt:❮
 
@@ -42,7 +44,6 @@ alias sx="startx"
 alias grep="rg"
 #alias cat="bat --theme Material-Theme-Palenight"
 alias bat="bat --theme Material-Theme-Palenight"
-alias yay="paru"
 alias sdn="shutdown now"
 alias pacup="sudo pacman -Syyu"
 alias updaterepos='sudo reflector --verbose -c US --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
