@@ -48,7 +48,7 @@ let g:rainbow_active = 1
 let g:tokyonight_style = 'night' " available: night, storm
 let g:tokyonight_enable_italic = 0
 let g:tokyonight_transparent_background = 1
-colorscheme tokyonight
+colorscheme onedark
 filetype plugin on
 syntax on
 set shiftwidth=3
@@ -212,3 +212,7 @@ let g:startify_custom_header = [
 autocmd BufNewFile,BufRead * if &ft == '' | set ft=config | endif
 autocmd BufNewFile,BufRead *.conf set ft=config
 autocmd BufReadPost * if line("'\"") >= 1 && line("'\"") <= line("$") && &ft !~# 'commit' | exe "normal! g`\"" | endif
+augroup RestoreCursorShapeOnExit
+    autocmd!
+    autocmd VimLeave * set guicursor=a:ver20
+augroup END
