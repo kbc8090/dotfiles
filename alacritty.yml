@@ -20,7 +20,7 @@ window:
   #dimensions:
   #  columns: 0
   #  lines: 0
-  opacity: 0.88
+  opacity: 0.92
   # Window position (changes require restart)
   #
   # Specified in number of pixels.
@@ -34,8 +34,8 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 3
-    y: 3
+    x: 4
+    y: 4
 
   # Spread additional padding evenly around the terminal content.
   #dynamic_padding: false
@@ -109,7 +109,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: JetBrainsMono Nerd Font
+    family: FiraCode Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Medium
@@ -120,10 +120,10 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: JetBrains Mono
+    family: Fira Code
 
     # The `style` can be specified to pick a specific face.
-    style: ExtraBold
+    style: Bold
 
   # Italic font face
   italic:
@@ -131,10 +131,10 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: JetBrains Mono
+    family: IBM Plex Mono
 
     # The `style` can be specified to pick a specific face.
-    style: Medium Italic
+    style: Italic
 
   # Bold italic font face
   bold_italic:
@@ -142,7 +142,7 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: JetBrains Mono
+    family: Fira Code
 
     # The `style` can be specified to pick a specific face.
     style: Bold Italic
@@ -181,13 +181,68 @@ font:
 
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: false
-
-# Colors (Tomorrow Night Bright)
-colors:
-  # Default colors
+doom_light: &doom_light
   primary:
-    background: '0x1b1a2e'
-    foreground: '0xbbc5ff'
+    foreground: '#383a42'
+    background: '#fafafa'
+  cursor:
+    cursor: '#4078f2'
+    text: '#fafafa'
+  normal:
+    black: '#fafafa'
+    red: '#e45649'
+    green: '#50a14f'
+    yellow: '#986801'
+    blue: '#4078f2'
+    magenta: '#b751b6'
+    cyan: '#0184bc'
+    white: '#383a42'
+  bright:
+    black: '#9ca0a4'
+    red: '#e45649'
+    green: '#50a14f'
+    yellow: '#da8548'
+    blue: '#4078f2'
+    magenta: '#b751b6'
+    cyan: '#0184bc'
+    white: '#efefef'
+
+doom_dark: &doom_dark
+  primary:
+    # foreground: '#bbc2cf'
+    foreground: '#bfc8ff'
+    # background: "#282c34"
+    background: "#262a38"
+  cursor:
+    cursor: '#51afef'
+    text: '#282c34'
+  normal:
+    black: "#6b747b"
+    red: "#ff6c6b"
+    green: "#98be65"
+    yellow: "#ecbe7b"
+    blue: "#51afef"
+    magenta: "#a9a1e1"
+    cyan: "#46d9ff"
+    white: "#bbc2cf"
+  bright:
+    black: "#3f444a"
+    red: "#ff6c6b"
+    green: "#98be65"
+    yellow: "#da8548"
+    blue: "#51afef"
+    magenta: "#a9a1e1"
+    cyan: "#46d9ff"
+    white: "#efefef"
+
+# Apply
+colors: *doom_dark
+# Colors (Tomorrow Night Bright)
+#colors:
+  # Default colors
+  #  primary:
+  #   background: '0x1b1a2e'
+  #  foreground: '0xbbc5ff'
 
     # Bright and dim foreground colors
     #
@@ -201,40 +256,40 @@ colors:
   #
   # Colors which should be used to draw the terminal cursor. If these are unset,
   # the cursor color will be the inverse of the cell color.
-  cursor:
+  #cursor:
   #  text: '0x000000'
-    cursor: '0xc387ea'
+  #   cursor: '0xc387ea'
 
   # Selection colors
   #
   # Colors which should be used to draw the selection area. If selection
   # background is unset, selection color will be the inverse of the cell colors.
   # If only text is unset the cell text color will remain the same.
-  selection:
-    text: '0xbfc8ff'
-    background: '0x212431'
+  #  selection:
+  #  text: '0xbfc8ff'
+  #  background: '0x212431'
 
-  # Normal colors
-  normal:
-    black:   '0x6a73ab'
-    red:     '0xf07178'
-    green:   '0xc3e88d'
-    yellow:  '0xffb26b'
-    blue:    '0x82aaff'
-    magenta: '0xc792ea'
-    cyan:    '0x89ddff'
-    white:   '0xd0d0d0'
+  # normal colors
+  #normal:
+  #  black:   '0x6a73ab'
+  #  red:     '0xf07178'
+  #  green:   '0xc3e88d'
+  #  yellow:  '0xffb26b'
+  #  blue:    '0x82aaff'
+  #  magenta: '0xc792ea'
+  #  cyan:    '0x89ddff'
+  #  white:   '0xd0d0d0'
 
-  # Bright colors
-  bright:
-    black:   '0x4c5063'
-    red:     '0xff8b92'
-    green:   '0xddffa7'
-    yellow:  '0xffc185'
-    blue:    '0x9cc4ff'
-    magenta: '0xe1acff'
-    cyan:    '0xa3f7ff'
-    white:   '0xffffff'
+  # bright colors
+  #bright:
+  #  black:   '0x4c5063'
+  #  red:     '0xff8b92'
+  #  green:   '0xddffa7'
+  #  yellow:  '0xffc185'
+  #  blue:    '0x9cc4ff'
+  #  magenta: '0xe1acff'
+  #  cyan:    '0xa3f7ff'
+  #  white:   '0xffffff'
 
   # Dim colors
   #
