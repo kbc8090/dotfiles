@@ -40,7 +40,7 @@ $character"""
 
 [username]
 style_user = "fg:black bg:red"
-format = '[$user@]($style)'
+format = '[ $user@]($style)'
 disabled = false
 show_always = true
 
