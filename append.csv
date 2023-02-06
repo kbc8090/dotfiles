@@ -1,3 +1,4 @@
+^sep()
 Exit to Prompt,kill $XSESSION_PID,system-log-out
 Reboot,reboot,system-reboot
 Shutdown,shutdown now,system-shutdown

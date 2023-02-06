@@ -16,6 +16,7 @@ XTerm*boldMode: true
 XTerm*boldIsBright: false
 XTerm*locale: true
 
+XTerm*background: #1b1e2b
 !---- UXTERM Settings ----!
 
 UXTerm*boldFont: CaskaydiaCove Nerd Font:style=Regular:size=15:autohint=true:dpi=96
@@ -28,12 +29,12 @@ UXTerm*locale: true
 
 URxvt*termName: xterm-256color
 URxvt*letterSpace: 0
-URxvt*font: xft:JetBrainsMono Nerd Font:size=14:style=Medium, xft:CaskaydiaCove Nerd Font:size=13:style=Regular, xft:JoyPixels:pixelsize=14
+URxvt*font: xft:JetBrainsMono Nerd Font:size=13:style=Medium, xft:CaskaydiaCove Nerd Font:size=13:style=Regular, xft:JoyPixels:pixelsize=14
 URxvt*scrollBar: false
 URxvt*depth: 32
 URxvt*sizeHints: true
-URxvt*background: [87]#1b1e2b
-URxvt*internalBorder: 2
+URxvt*background: [90]#1b1e2b
+URxvt*internalBorder: 4
 URxvt*perl-ext:
 URxvt.perl-ext-common: default,matcher,resize-font
 URxvt.keysym.C-Down:  resize-font:smaller
@@ -46,7 +47,7 @@ URxvt*underlineURLs: true
 URxvt*urlButton: 1
 URxvt*intensityStyles: false
 URxvt*cursorColor: #c387ea 
-
+URxvt.geometry: 80x-1
 !--- sxiv Settings ----!
 
 Sxiv.background: #1b1e2b
@@ -55,11 +56,11 @@ Sxiv.font: FiraCode Nerd Font:style=Medium:size=9:autohint=true:rgba=rgb:lcdfilt
 
 !--- st (suckless) Settings ----!
 
-st.alpha: 0.87
-st.font: Fira Mono:style=Medium:size=15:dpi=96:antialias=true:autohint=false:hinting=true:rgba=rgb:hintstyle=hintslight:lcdfilter=lcddefault
-st.borderpx: 2
-st.minlatency: 4
-st.maxlatency: 12
+st.alpha: 0.90
+st.font: CaskaydiaCove Nerd Font:size=13:style=Regular:autohint=true:dpi=96
+st.borderpx: 4
+st.minlatency: 2
+st.maxlatency: 8
 
 ! special
 *.foreground:   #a8b4ff
@@ -97,3 +98,4 @@ st.maxlatency: 12
 ! white
 *.color7:       #d0d0d0
 *.color15:      #ffffff
+

@@ -20,7 +20,7 @@ window:
   #dimensions:
   #  columns: 0
   #  lines: 0
-  opacity: 0.92
+  opacity: 0.9
   # Window position (changes require restart)
   #
   # Specified in number of pixels.
@@ -109,7 +109,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: FiraCode Nerd Font
+    family: JetBrainsMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Medium
@@ -120,7 +120,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Fira Code
+    family: JetBrains Mono
 
     # The `style` can be specified to pick a specific face.
     style: Bold
@@ -131,10 +131,10 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: IBM Plex Mono
+    family: JetBrains Mono
 
     # The `style` can be specified to pick a specific face.
-    style: Italic
+    style: Medium Italic
 
   # Bold italic font face
   bold_italic:
@@ -142,13 +142,13 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Fira Code
+    family: JetBrainsMonoNL Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Bold Italic
 
   # Point size
-  size: 14
+  size: 13
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -180,7 +180,7 @@ font:
   #use_thin_strokes: true
 
 # If `true`, bold text is drawn using the bright color variants.
-draw_bold_text_with_bright_colors: false
+draw_bold_text_with_bright_colors: true
 doom_light: &doom_light
   primary:
     foreground: '#383a42'
@@ -212,7 +212,7 @@ doom_dark: &doom_dark
     # foreground: '#bbc2cf'
     foreground: '#bfc8ff'
     # background: "#282c34"
-    background: "#262a38"
+    background: "#202430"
   cursor:
     cursor: '#51afef'
     text: '#282c34'
@@ -235,8 +235,40 @@ doom_dark: &doom_dark
     cyan: "#46d9ff"
     white: "#efefef"
 
+
+tokyonight: &tokyonight
+  primary:
+    background: '#24283b'
+    foreground: '#bfc8ff'
+  # cursor:
+  #   cursor: '#bb9af7'
+  #   text: '#bfc8ff'
+  normal:
+    black:   '#5c768a'
+    red:     '#ff5c7d'
+    green:   '#9ece6a'
+    yellow:  '#e0af68'
+    blue:    '#5c91f7'
+    magenta: '#b07af7'
+    cyan:    '#6ad8ff'
+    white:   '#a9b1d6'
+
+  # Bright colors
+  bright:
+    black:   '#3b4261'
+    red:     '#f7768e'
+    green:   '#9ece6a'
+    yellow:  '#e0af68'
+    blue:    '#5c91f7'
+    magenta: '#b07af7'
+    cyan:    '#6ad8ff'
+    white:   '#c0caf5'
+
+  indexed_colors:
+    - { index: 16, color: '#ff9e64' }
+    - { index: 17, color: '#db4b4b' }
 # Apply
-colors: *doom_dark
+colors: *tokyonight
 # Colors (Tomorrow Night Bright)
 #colors:
   # Default colors

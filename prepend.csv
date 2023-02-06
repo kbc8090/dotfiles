@@ -1,5 +1,5 @@
 Firefox,      firefox,               firefox
 Chromium,      chromium,               chromium
 Thunar, thunar,               system-file-manager
-Terminal,     urxvt,                 utilities-terminal
+Terminal,     st -e fish,                 utilities-terminal
 ^sep()

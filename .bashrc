@@ -19,3 +19,5 @@ alias sdn='shutdown now'
 alias sx='startx'
 alias vimrc='nvim $HOME/.config/nvim/init.vim'
 alias pacup='sudo pacman -Syyu'
+
+# eval "$(starship init bash)"
