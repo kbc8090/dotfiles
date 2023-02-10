@@ -68,7 +68,7 @@ st.maxlatency: 8
 *.cursorColor:  #c387ea
 
 ! black
-*.color0:       #6a73ab
+*.color0:       #435470
 *.color8:       #4c5063
 
 ! red
