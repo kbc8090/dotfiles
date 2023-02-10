@@ -1,0 +1,20 @@
+format = """
+[┌](bold black)\
+[  ](purple)\
+$directory\
+$all\
+$line_break\
+[└](bold black)\
+$character"""
+
+[character]
+success_symbol = "[➤](red)[➤](yellow)[➤](green) "
+error_symbol = "[➤](red)[➤](red)[➤](red) "
+
+[directory]
+style = "fg:bold blue"
+format = "[$path ]($style)"
+read_only = ""
+truncation_length = 6
+truncation_symbol = '…/'
+truncate_to_repo = false
