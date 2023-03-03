@@ -5,4 +5,5 @@
 #xset r rate 300 59 &
 #$HOME/.local/bin/wallpaper &
 picom &
-dwmblocks &
+killall dwmblocks
+sleep 0.2 && dwmblocks &
