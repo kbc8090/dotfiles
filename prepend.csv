@@ -1,5 +1,4 @@
-Firefox,      firefox,               firefox
 Chromium,      chromium,               chromium
-Thunar, thunar,               system-file-manager
-Terminal,     st -e fish,                 utilities-terminal
+PCManFM, pcmanfm,               system-file-manager
+Terminal,     st,                 utilities-terminal
 ^sep()
