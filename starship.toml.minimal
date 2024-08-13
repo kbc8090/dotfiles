@@ -1,18 +1,18 @@
 format = """
-[┌](bold black)\
-[  ](purple)\
+[┌](blue)\
+[  ](bold purple)\
 $directory\
 $all\
 $line_break\
-[└](bold black)\
+[└](blue)\
 $character"""
 
 [character]
-success_symbol = "[➤](red)[➤](yellow)[➤](green) "
+success_symbol = "[➤](red)[➤](yellow)[➤](green) "
 error_symbol = "[➤](red)[➤](red)[➤](red) "
 
 [directory]
-style = "fg:bold blue"
+style = "fg:bold cyan"
 format = "[$path ]($style)"
 read_only = ""
 truncation_length = 6
