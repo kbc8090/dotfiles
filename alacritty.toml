@@ -47,15 +47,15 @@ family = "JetBrainsMono Nerd Font"
 style = "Medium"
 
 [font.bold]
-family = "JetBrains Mono"
+family = "JetBrains Mono NL"
 style = "ExtraBold"
 
 [font.bold_italic]
-family = "JetBrains Mono"
+family = "JetBrains Mono NL"
 style = "ExtraBold Italic"
 
 [font.italic]
-family = "JetBrains Mono"
+family = "JetBrains Mono NL"
 style = "Medium Italic"
 
 [font.offset]
