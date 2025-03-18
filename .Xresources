@@ -1,17 +1,17 @@
 !---- XFT Font Settings (Make Fonts Great Again) ----!
 
-Xft.dpi: 96
+Xft.dpi: 100
 Xft.antialias: true
 Xft.rgba: rgb
-Xft.autohint: false
+Xft.autohint: true
 Xft.hinting: true
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
 !---- XTERM Settings ----!
 
-XTerm*boldFont: CaskaydiaCove Nerd Font:style=Regular:size=14:autohint=true:dpi=96
-XTerm*faceName: CaskaydiaCove Nerd Font:style=Regular:size=14:autohint=true:dpi=96
+XTerm*boldFont: JetBrainsMono Nerd Font:style=Medium:size=13:autohint=true:dpi=96
+XTerm*faceName: JetBrainsMono Nerd Font:style=Medium:size=13:autohint=true:dpi=96
 XTerm*boldMode: true
 XTerm*boldIsBright: false
 XTerm*locale: true
@@ -56,46 +56,82 @@ Sxiv.font: FiraCode Nerd Font:style=Medium:size=9:autohint=true:rgba=rgb:lcdfilt
 
 !--- st (suckless) Settings ----!
 
-st.alpha: 0.90
-st.font: CaskaydiaCove Nerd Font:size=13:style=Regular:autohint=true:dpi=96
-st.borderpx: 4
-st.minlatency: 2
-st.maxlatency: 8
+st.alpha: 0.78
+st.font: JetBrainsMono Nerd Font:size=11:style=Medium:autohint=true:dpi=102:lcdfilter=lcddefault
+st.borderpx: 2
+st.minlatency: 12
+st.maxlatency: 18
+
+!! special
+!*.foreground:   #a8b4ff
+!*.background:   #1b1e2b
+!*.cursorColor:  #c387ea
+!
+!! black
+!*.color0:       #4a618a
+!*.color8:       #5c768a
+!
+!! red
+!*.color1:       #f07178
+!*.color9:       #ff8b92
+!
+!! green
+!*.color2:       #b7e07c
+!*.color10:      #d9ff9e
+!
+!! yellow
+!*.color3:       #ffb26b
+!*.color11:      #ffc185
+!
+!! blue
+!*.color4:       #719eff
+!*.color12:      #86c4ff
+!
+!! magenta
+!*.color5:       #c387ea
+!*.color13:      #dea2ff
+!
+!! cyan
+!*.color6:       #82dbff
+!*.color14:      #9af6ff
+!
+!! white
+!*.color7:       #d0d0d0
+!*.color15:      #ffffff
 
 ! special
-*.foreground:   #a8b4ff
-*.background:   #1b1e2b
+*.foreground:   #b5bdc7
+*.background:   #1f1f28
 *.cursorColor:  #c387ea
 
 ! black
-*.color0:       #435470
-*.color8:       #4c5063
+*.color0:       #4a618a
+*.color8:       #5c768a
 
 ! red
-*.color1:       #f07178
-*.color9:       #ff8b92
+*.color1:       #C34043
+*.color9:       #e82424
 
 ! green
-*.color2:       #b7e07c
-*.color10:      #d9ff9e
+*.color2:       #76946a
+*.color10:      #98bb6c
 
 ! yellow
-*.color3:       #ffb26b
-*.color11:      #ffc185
+*.color3:       #FF9E3B
+*.color11:      #FFA066
 
 ! blue
-*.color4:       #719eff
-*.color12:      #86c4ff
+*.color4:       #739cd8
+*.color12:      #7fb4ca
 
 ! magenta
-*.color5:       #c387ea
-*.color13:      #dea2ff
+*.color5:       #857fb8
+*.color13:      #938aa9
 
 ! cyan
-*.color6:       #82dbff
-*.color14:      #9af6ff
+*.color6:       #7aa89f
+*.color14:      #87c4b9
 
 ! white
-*.color7:       #d0d0d0
-*.color15:      #ffffff
-
+*.color7:       #c8c093
+*.color15:      #dcd7ba
